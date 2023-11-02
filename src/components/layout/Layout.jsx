@@ -6,9 +6,7 @@ export default function Layout({ children }) {
     <div className="w-full h-[100%] flex flex-col  justify-between">
       <Header />
 
-
-   {children}
-   
+      {children}
 
       <Footer />
     </div>
