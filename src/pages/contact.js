@@ -1,5 +1,6 @@
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:8080/getadmin.php/");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/getadmin.php/`);
+  //http://localhost:8080/getadmin.php/
   const repo = await res.json();
   return { props: { repo } };
 }
