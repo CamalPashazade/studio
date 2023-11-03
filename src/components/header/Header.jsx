@@ -19,7 +19,6 @@ const Header = () => {
     objectFit: "cover",
   };
 
-
   return (
     <div className=" flex flex-col items-center px-3" style={containerStyle}>
       <video autoPlay muted loop style={backgroundVideoStyle}>
@@ -37,21 +36,21 @@ const Header = () => {
           />
         </Link>
 
-  <div>
-  <nav className="hidden  top-3 text-lg  items-center md:flex ">
-          <Link className="pl-3 text-white" href="/">
-            Home
-          </Link>
-          <Link className="pl-3 text-white" href="/about">
-            About
-          </Link>
-          <Link className="pl-3 text-white" href="/contact">
-            Contact us
-          </Link>
-        </nav>
+        <div>
+          <nav className="hidden  top-3 text-lg  items-center md:flex ">
+            <Link className="pl-3 text-white" href="/">
+              Home
+            </Link>
+            <Link className="pl-3 text-white" href="/about">
+              About
+            </Link>
+            <Link className="pl-3 text-white" href="/contact">
+              Contact us
+            </Link>
+          </nav>
 
-        <Mobile  />
-  </div>
+          <Mobile />
+        </div>
       </div>
     </div>
   );

@@ -5,22 +5,17 @@ import { BsInstagram } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 
-
-
 const Footer = () => {
-
   // const [data, setData] = useState(false)
 
- 
   // useEffect(() => {
   //   fetch('http://localhost:8080/getservices.php/')
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setData(data)
-    
+
   //     })
   // }, [])
-
 
   //cleint side fetch
 
@@ -32,7 +27,6 @@ const Footer = () => {
             Website created with love by Jamal to his brother Nijat
           </p>
         </div>
-     
 
         <div className="flex text-white w-[200px] justify-around mt-4  ">
           <Link
@@ -77,5 +71,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

@@ -3,17 +3,14 @@ import Meta from "@/components/meta/Meta";
 import "@/styles/globals.css";
 import Head from "next/head";
 
-
 export default function App({ Component, pageProps }) {
   return (
     <>
-<Meta/>
+      <Meta />
 
       <Layout>
-      <Component {...pageProps} />
-    </Layout>
-    
+        <Component {...pageProps} />
+      </Layout>
     </>
- 
   );
 }

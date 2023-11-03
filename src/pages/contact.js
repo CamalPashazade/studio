@@ -1,8 +1,9 @@
 import Meta from "@/components/meta/Meta";
-import Head from "next/head";
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/getadmin.php/`);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_API_URL}/getadmin.php/`
+  );
   //http://localhost:8080/getadmin.php/
   const repo = await res.json();
   return { props: { repo } };
@@ -12,9 +13,7 @@ const Contact = ({ repo }) => {
   // console.log(typeof repo);
   return (
     <div className="flex w-full  flex-col items-center justify-center">
-    
-
-    <Meta/>
+      <Meta />
 
       <div className="px-3 container bg-pink-400 ">
         Contact us
@@ -51,7 +50,6 @@ const Contact = ({ repo }) => {
           efwwewffffffffffffff fewwwwwwwwwwwwwwwwwww acwfaefaefs
           efwwewffffffffffffff fewwwwwwwwwwwwwwwwwww
         </p>
-
         <p>
           acwfaefaefs efwwewffffffffffffff fewwwwwwwwwwwwwwwwwww acwfaefaefs
           efwwewffffffffffffff fewwwwwwwwwwwwwwwwwww acwfaefaefs
