@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 
@@ -7,8 +7,13 @@ const Mobile = () => {
   const mobileClassName = "block relative md:hidden";
   const [openNav, setOpenNav] = useState(false);
 
+
   const handleMobNav = () => {
     setOpenNav(!openNav);
+  };
+
+  const closeNav = () => {
+    setOpenNav(false);
   };
 
   useEffect(() => {
@@ -39,7 +44,7 @@ const Mobile = () => {
       )}
 
       {openNav ? (
-        <nav className="absolute top-14 left-0 w-full flex flex-col h-[345px] bg-pink-700 ">
+        <nav onClick={closeNav}  className="absolute top-14 left-0 w-full flex flex-col h-[345px] bg-pink-700 ">
           <Link className="pl-3 mt-3 text-white" href="/">
             Home
           </Link>
