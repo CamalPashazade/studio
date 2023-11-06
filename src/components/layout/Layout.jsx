@@ -1,10 +1,16 @@
+
+
+import { useTranslation } from "next-i18next";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-export default function Layout({ children }) {
+
+const Layout =({ children }) => {
+  const  {t} = useTranslation('common')
   return (
     <div className="w-full h-[100%] flex flex-col  justify-between">
-      <Header />
+      <Header t={t} />
 
       {children}
 
@@ -12,3 +18,7 @@ export default function Layout({ children }) {
     </div>
   );
 }
+
+export default  Layout;
+
+
