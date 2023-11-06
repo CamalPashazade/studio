@@ -1,9 +1,14 @@
+
+
 import Image from "next/image";
 import Link from "next/link";
 import Mobile from "./mobile/Mobile";
 import Langdropdown from "../langdropdown/Langdropdown";
 
-const Header = () => {
+
+
+const Header = ({t}) => {
+  // const { t } = useTranslation('common')
   const containerStyle = {
     width: "100%",
     height: "400px",
@@ -40,13 +45,16 @@ const Header = () => {
         <div className="flex">
           <nav className="hidden  top-3 text-lg  items-center md:flex ">
             <Link className="pl-3 text-white" href="/">
-              Home
+              {/* Home */}
+              {t("navbar.home")}
             </Link>
             <Link className="pl-3 text-white" href="/about">
-              About
+              {/* About */}
+              {t('navbar.about')}
             </Link>
             <Link className="pl-3 text-white" href="/contact">
-              Contact us
+              {/* Contact us */}
+              {t('navbar.contact')}
             </Link>
           </nav>
 

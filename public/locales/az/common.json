@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "home": "Ana Sehife",
+    "about": "Haqqimizda",
+    "contact": "Elaqe"
+  },
+  "greetings":{
+    "hi":"Salam",
+    "hu":"Netersen qadan alim"
+
+  }
+}

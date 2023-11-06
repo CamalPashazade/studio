@@ -1,6 +1,7 @@
 import Meta from "@/components/meta/Meta";
 import React from "react";
 import { Inter, Roboto } from "next/font/google";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 
 const inter = Inter({
@@ -35,3 +36,14 @@ const About = () => {
 };
 
 export default About;
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+
+      ])),
+
+    },
+  }
+}
